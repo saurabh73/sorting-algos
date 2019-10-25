@@ -4,7 +4,7 @@
      
     int main()
     {
-      int array[100], n, c, d, swap;
+      int array[100], n, c, d, temp;
      
       printf("Enter number of elements\n");
       scanf("%d", &n);
@@ -20,17 +20,18 @@
         {
           if (array[d] > array[d+1]) /* For decreasing order use < */
           {
-            swap       = array[d];
+            temp       = array[d];
             array[d]   = array[d+1];
-            array[d+1] = swap;
+            array[d+1] = temp;
           }
         }
       }
      
       printf("Sorted list in ascending order:\n");
      
-      for (c = 0; c < n; c++)
-         printf("%d\n", array[c]);
-     
+      for (c = 0; c < n; c++) {
+          printf("%d\n", array[c]);
+      }
+        
       return 0;
     }
