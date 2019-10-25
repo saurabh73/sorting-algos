@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-/* A simple transformation of the original algorithm for linked lists */
+
 /* InsertionSort for double-linked lists */
 
 typedef struct Node{
@@ -8,7 +8,7 @@ int data;
 struct Node *next;
 struct Node *prev;
 }Node;
-
+/* the algorithm */
 Node *InsertionSort (Node *myList){
 	int key;
 	myList->prev = NULL;
@@ -33,7 +33,7 @@ Node *InsertionSort (Node *myList){
 	}
 	return temp;
 }
-
+/* an example main to test that the algorithm actually runs */
 int main(){
 	int i,val;
 	Node *head = (Node *)malloc(sizeof(struct Node));
