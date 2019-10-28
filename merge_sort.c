@@ -1,34 +1,34 @@
 /*Merge Sort Code*/
 #include <stdio.h>
  
-void mergeSort(int [], int, int, int);
-void partition(int [],int, int);
+void mergeSort(long long int [], long long int, long long int, long long int);
+void partition(long long int [],long long int, long long int);
  
 int main()
 {
-    int list[50];
-    int i, size;
+    long long int list[50];
+    long long int i, size;
  
     printf("Enter total number of elements:");
-    scanf("%d", &size);
+    scanf("%lld", &size);
     printf("Enter the elements:\n");
     for(i = 0; i < size; i++)
     {
-         scanf("%d", &list[i]);
+         scanf("%lld", &list[i]);
     }
     partition(list, 0, size - 1);
     printf("After merge sort:\n");
     for(i = 0;i < size; i++)
     {
-         printf("%d   ",list[i]);
+         printf("%lld   ",list[i]);
     }
  
    return 0;
 }
  
-void partition(int list[],int low,int high)
+void partition(long long int list[],long long int low,long long int high)
 {
-    int mid;
+    long long int mid;
  
     if(low < high)
     {
@@ -39,9 +39,9 @@ void partition(int list[],int low,int high)
     }
 }
  
-void mergeSort(int list[],int low,int mid,int high)
+void mergeSort(long long int list[],long long int low,long long int mid,long long int high)
 {
-    int i, mi, k, lo, temp[50];
+    long long int i, mi, k, lo, temp[50];
  
     lo = low;
     i = low;
