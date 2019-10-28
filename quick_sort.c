@@ -1,30 +1,30 @@
 #include <stdio.h>
  
-void quick_sort(int[],int,int);
-int partition(int[],int,int);
+void quick_sort(long long int[],long long int,long long int);
+int partition(long long long long int[],long long long long long long int,long long int);
  
 int main()
 {
-	int a[50],n,i;
+	long long int a[50],n,i;
 	printf("Enter number of elements:\n");
-	scanf("%d",&n);
+	scanf("%lld",&n);
 	printf("\nEnter the elements:\n");
 	
 	for(i=0;i<n;i++)
-		scanf("%d",&a[i]);
+		scanf("%lld",&a[i]);
 		
 	quick_sort(a,0,n-1);
 	printf("\nSorted Array using quick_sort:\n");
 	
 	for(i=0;i<n;i++)
-		printf("%d ",a[i]);
+		printf("%lld ",a[i]);
 	
 	return 0;		
 }
  
-void quick_sort(int a[],int l,int u)
+void quick_sort(long long int a[],long long int l,long long int u)
 {
-	int j;
+	long long int j;
 	if(l<u)
 	{
 		j=partition(a,l,u);
@@ -33,9 +33,9 @@ void quick_sort(int a[],int l,int u)
 	}
 }
  
-int partition(int a[],int l,int u)
+long long int partition(long long int a[],long long int l,long long int u)
 {
-	int v,i,j,temp;
+	long long int v,i,j,temp;
 	v=a[l];
 	i=l;
 	j=u+1;
