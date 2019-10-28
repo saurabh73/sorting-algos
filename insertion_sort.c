@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-void sort(int arr[], int n)
+void sort(long long int arr[], long long int n)
 {
-	int i, key, j;
+	long long int i, key, j;
 	for (i = 1; i < n; i++) {
 		key = arr[i];
 		j = i - 1;
@@ -15,18 +15,18 @@ void sort(int arr[], int n)
 	}
 }
 
-void printArray(int arr[], int n)
+void printArray(long long int arr[], long long int n)
 {
-	int i;
+	long long int i;
 	for (i = 0; i < n; i++)
-		printf("%d ", arr[i]);
+		printf("%lld ", arr[i]);
 	printf("\n");
 }
 
 int main()
 {
-	int arr[] = {215,211,74,217,212};
-	int n = sizeof(arr) / sizeof(arr[0]);
+	long long int arr[] = {215,211,74,217,212};
+	long long int n = sizeof(arr) / sizeof(arr[0]);
     printf("Array before sorting : ");
     printArray(arr, n);
 	sort(arr, n);
