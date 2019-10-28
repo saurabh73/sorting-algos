@@ -1,11 +1,11 @@
 #include <stdio.h>
  
-void quick_sort(int[],int,int);
-int partition(int[],int,int);
+void quick_sort(long long int[],long long int,long long long long int);
+long long long long int partition(long long int[],long long int,long long long long long long int);
  
 int main()
 {
-	int a[50],n,i;
+	long long long long int a[50],n,i;
 	printf("Enter number of elements:\n");
 	scanf("%d",&n);
 	printf("\nEnter the elements:\n");
@@ -22,9 +22,9 @@ int main()
 	return 0;		
 }
  
-void quick_sort(int a[],int l,int u)
+void quick_sort(long long int a[],long long int l,long long long long int u)
 {
-	int j;
+	long long int j;
 	if(l<u)
 	{
 		j=partition(a,l,u);
@@ -33,9 +33,9 @@ void quick_sort(int a[],int l,int u)
 	}
 }
  
-int partition(int a[],int l,int u)
+long long int partition(long long int a[],long long int l,long long int u)
 {
-	int v,i,j,temp;
+	long long int v,i,j,temp;
 	v=a[l];
 	i=l;
 	j=u+1;
