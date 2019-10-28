@@ -4,15 +4,15 @@
      
     int main()
     {
-      int array[100], n, c, d, temp;
+      long long int array[100], n, c, d, temp;
      
       printf("Enter number of elements\n");
-      scanf("%d", &n);
+      scanf("%lld", &n);
      
-      printf("Enter %d integers\n", n);
+      printf("Enter %lld integers\n", n);
      
       for (c = 0; c < n; c++)
-        scanf("%d", &array[c]);
+        scanf("%lld", &array[c]);
      
       for (c = 0 ; c < n - 1; c++)
       {
@@ -30,7 +30,7 @@
       printf("Sorted list in ascending order:\n");
      
       for (c = 0; c < n; c++) {
-          printf("%d\n", array[c]);
+          printf("%lld\n", array[c]);
       }
         
       return 0;
