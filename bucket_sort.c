@@ -1,9 +1,3 @@
-// Sean Szumlanski
-// COP 3502, Fall 2018
-//
-// bucket-sort.c
-// =============
-// Implementation of the bucket sort ("counting sort") that we saw in class.
 
 
 #include <stdio.h>
