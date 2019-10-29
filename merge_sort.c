@@ -2,44 +2,27 @@
 #include <stdio.h>
  
 void mergeSort(int [], int, int, int);
-void partition(int [],int, int);
  
-int main()
-{
-    int list[50];
-    int i, size;
- 
-    printf("Enter total number of elements:");
-    scanf("%d", &size);
-    printf("Enter the elements:\n");
-    for(i = 0; i < size; i++)
-    {
-         scanf("%d", &list[i]);
-    }
-    partition(list, 0, size - 1);
-    printf("After merge sort:\n");
-    for(i = 0;i < size; i++)
-    {
-         printf("%d   ",list[i]);
-    }
- 
-   return 0;
-}
- 
-void partition(int list[],int low,int high)
+void partition(int arr[],int low,int high)
 {
     int mid;
  
     if(low < high)
     {
         mid = (low + high) / 2;
-        partition(list, low, mid);
-        partition(list, mid + 1, high);
-        mergeSort(list, low, mid, high);
+        partition(arr, low, mid);
+        partition(arr, mid + 1, high);
+        mergeSort(arr, low, mid, high);
     }
+    int k;
+    printf("The sorted arr according to Merge Sort is :\n");
+
+    for (k = 0; k < n; k++)
+        printf("%d ", arr[k]);
+    printf("\n");
 }
  
-void mergeSort(int list[],int low,int mid,int high)
+void mergeSort(int arr[],int low,int mid,int high)
 {
     int i, mi, k, lo, temp[50];
  
@@ -48,14 +31,14 @@ void mergeSort(int list[],int low,int mid,int high)
     mi = mid + 1;
     while ((lo <= mid) && (mi <= high))
     {
-        if (list[lo] <= list[mi])
+        if (arr[lo] <= arr[mi])
         {
-            temp[i] = list[lo];
+            temp[i] = arr[lo];
             lo++;
         }
         else
         {
-            temp[i] = list[mi];
+            temp[i] = arr[mi];
             mi++;
         }
         i++;
@@ -64,7 +47,7 @@ void mergeSort(int list[],int low,int mid,int high)
     {
         for (k = mi; k <= high; k++)
         {
-            temp[i] = list[k];
+            temp[i] = arr[k];
             i++;
         }
     }
@@ -72,13 +55,13 @@ void mergeSort(int list[],int low,int mid,int high)
     {
         for (k = lo; k <= mid; k++)
         {
-             temp[i] = list[k];
+             temp[i] = arr[k];
              i++;
         }
     }
  
     for (k = low; k <= high; k++)
     {
-        list[k] = temp[k];
+        arr[k] = temp[k];
     }
 }

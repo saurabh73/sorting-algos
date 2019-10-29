@@ -7,7 +7,7 @@ void swap(int *a, int *b)
 	*b = temp;
 }
 
-void sort(int arr[], int n)
+void selection_sort(int arr[], int n)
 {
 	int i, j, min;
 	for (i = 0; i < n-1; i++)
@@ -18,24 +18,11 @@ void sort(int arr[], int n)
 			min = j;
 		swap(&arr[min], &arr[i]);
 	}
-}
+	int k;
+	printf("The sorted list according to Selection Sort is :\n");
 
-void printArray(int arr[], int n)
-{
-	int i;
-	for (i=0; i < n; i++)
-		printf("%d ", arr[i]);
+	for (k = 0; k < n; k++)
+		printf("%d ", arr[k]);
 	printf("\n");
 }
 
-int main()
-{
-	int arr[] = {215,211,74,217,212};
-	int n = sizeof(arr)/sizeof(arr[0]);
-	printf("Array before sorting : ");
-	printArray(arr, n);
-	sort(arr, n);
-	printf("Array after sorting : ");
-	printArray(arr, n);
-	return 0;
-}

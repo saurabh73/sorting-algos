@@ -1,12 +1,5 @@
 #include<stdio.h>
 
-void Show(int  arr[], int n){
-    int i;
-    for ( i=0; i<n; i++ )
-        printf("%d  ", arr[i]);
-    printf("\n");
-}
-
 void Swap( int *num_a, int *num_b ){
     int temp = *num_b;
     *num_b = *num_a;
@@ -44,15 +37,10 @@ void HeapSort(int array[], int length)
         Swap(&array[0], &array[i]);
         HeapAdjust(array, 0, i);
     }
-}
-
-int main(){
-    int arr_test[10] = { 8, 4, 2, 3, 5, 1, 6, 9, 0, 7 };
-
-    Show( arr_test, 10 );
-    HeapSort( arr_test, 10 );
-
-    Show( arr_test, 10 );
-    return 0;
+    int i;
+    printf("The sorted list according to Heap Sort is :\n");
+    for ( i=0; i<n; i++ )
+        printf("%d  ", array[i]);
+    printf("\n");
 }
 
