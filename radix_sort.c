@@ -1,3 +1,4 @@
+//c code for radix sort
 #include<stdio.h>   
 int getMax(int arr[], int n) 
 { 
@@ -11,8 +12,7 @@ void countSort(int arr[], int n, int exp)
 { 
 	int output[n];  
 	int i, count[10] = {0}; 
-
-	// Store count of occurrences in count[] 
+	
 	for (i = 0; i < n; i++) 
 		count[ (arr[i]/exp)%10 ]++; 
 
