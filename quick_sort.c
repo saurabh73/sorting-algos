@@ -1,66 +1,34 @@
-#include <stdio.h>
+#include<stdio.h>
+#include<conio.h>
+
+
+int partitionQS(int[],int,int);
  
-void quick_sort(int[],int,int);
-int partition(int[],int,int);
- 
-int main()
-{
-	int a[50],n,i;
-	printf("Enter number of elements:\n");
-	scanf("%d",&n);
-	printf("\nEnter the elements:\n");
-	
-	for(i=0;i<n;i++)
-		scanf("%d",&a[i]);
-		
-	quick_sort(a,0,n-1);
-	printf("\nSorted Array using quick_sort:\n");
-	
-	for(i=0;i<n;i++)
-		printf("%d ",a[i]);
-	
-	return 0;		
-}
- 
-void quick_sort(int a[],int l,int u)
+void quick_sort(int a[], int l,int u)
 {
 	int j;
 	if(l<u)
 	{
-		j=partition(a,l,u);
+		j=partitionQS(a,l,u);
 		quick_sort(a,l,j-1);
 		quick_sort(a,j+1,u);
 	}
 }
  
-int partition(int a[],int l,int u)
-{
-	int v,i,j,temp;
-	v=a[l];
-	i=l;
-	j=u+1;
-	
-	do
-	{
-		do
-			i++;
-			
-		while(a[i]<v&&i<=u);
-		
-		do
-			j--;
-		while(v<a[j]);
-		
-		if(i<j)
-		{
-			temp=a[i];
-			a[i]=a[j];
-			a[j]=temp;
-		}
-	}while(i<j);
-	
-	a[l]=a[j];
-	a[j]=v;
-	
-	return(j);
-}
+int partitionQS(int arr[], int low, int high) 
+{ 
+    int pivot = arr[high];    // pivot 
+    int i = (low - 1);  // Index of smaller element 
+  
+    for (int j = low; j <= high- 1; j++) 
+    { 
+        // If current element is smaller than the pivot 
+        if (arr[j] < pivot) 
+        { 
+            i++;    // increment index of smaller element 
+            swap(&arr[i], &arr[j]); 
+        } 
+    } 
+    swap(&arr[i + 1], &arr[high]); 
+    return (i + 1); 
+} 
