@@ -1,8 +1,13 @@
 #include<stdio.h>
-#include<conio.h>
+#include "sorto.h"
 
 
 int partitionQS(int[],int,int);
+void swap( int *num_a, int *num_b ){
+    int temp = *num_b;
+    *num_b = *num_a;
+    *num_a = temp;
+}
  
 void quick_sort(int a[], int l,int u)
 {
@@ -32,3 +37,4 @@ int partitionQS(int arr[], int low, int high)
     swap(&arr[i + 1], &arr[high]); 
     return (i + 1); 
 } 
+

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "sorto.h"
 
 void insertion_sort(int arr[], int n)
 {
@@ -13,11 +14,4 @@ void insertion_sort(int arr[], int n)
 		}
 		arr[j + 1] = key;
 	}
-
-	int k;
-	printf("The sorted list according to Insertion Sort is :\n");
-
-	for (k = 0; k < n; k++)
-		printf("%d ", arr[k]);
-	printf("\n");
 }
