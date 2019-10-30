@@ -62,7 +62,7 @@ int main(){
 	}
 	
 	
-	bubblesort(benchmark, 8);
+	bubblesort(benchmark, 7);
 	
 	for(int i = 0; i < 8; i ++){
 		 printf("%d", benchmark[i]);
