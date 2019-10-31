@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include "sorto.h"
 
-void swap(int *a, int *b)
+void SWAP(int *a, int *b)
 {
 	int temp = *a;
 	*a = *b;
@@ -16,13 +17,7 @@ void selection_sort(int arr[], int n)
 		for (j = i+1; j < n; j++)
 		if (arr[j] < arr[min])
 			min = j;
-		swap(&arr[min], &arr[i]);
+		SWAP(&arr[min], &arr[i]);
 	}
-	int k;
-	printf("The sorted list according to Selection Sort is :\n");
-
-	for (k = 0; k < n; k++)
-		printf("%d ", arr[k]);
-	printf("\n");
 }
 

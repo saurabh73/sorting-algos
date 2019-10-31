@@ -1,6 +1,7 @@
 /*Merge Sort Code*/
 #include <stdio.h>
- 
+#include "sorto.h"
+
 void mergeSort(int [], int, int, int);
  
 void partition(int arr[],int low,int high)
@@ -14,12 +15,6 @@ void partition(int arr[],int low,int high)
         partition(arr, mid + 1, high);
         mergeSort(arr, low, mid, high);
     }
-    int k;
-    printf("The sorted arr according to Merge Sort is :\n");
-
-    for (k = 0; k < n; k++)
-        printf("%d ", arr[k]);
-    printf("\n");
 }
  
 void mergeSort(int arr[],int low,int mid,int high)

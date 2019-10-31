@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include "sorto.h"
 
 void Swap( int *num_a, int *num_b ){
     int temp = *num_b;
@@ -37,10 +38,5 @@ void HeapSort(int array[], int length)
         Swap(&array[0], &array[i]);
         HeapAdjust(array, 0, i);
     }
-    int i;
-    printf("The sorted list according to Heap Sort is :\n");
-    for ( i=0; i<n; i++ )
-        printf("%d  ", array[i]);
-    printf("\n");
 }
 

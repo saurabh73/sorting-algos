@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include "sorto.h"
 
-void bubble_sort(int arr[], int n)
+void bubble_sort(int array[], int n)
 {
   int c,d,temp;
   for (c = 0 ; c < n - 1; c++)
@@ -14,11 +15,6 @@ void bubble_sort(int arr[], int n)
         array[d+1] = temp;
       }
     }
-  }
-
-  printf("The sorted list according to Bubble Sort is :\n");
-  for (c = 0; c < n; c++) {
-    printf("%d  ", array[c]);
   }
 }
     
