@@ -1,6 +1,4 @@
-// C++ implementation of Shell Sort 
-#include <iostream> 
-using namespace std; 
+#include <stdio.h>
 
 /* function to sort arr using shellSort */
 int shellSort(int arr[], int n) 
