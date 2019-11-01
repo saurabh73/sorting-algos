@@ -8,7 +8,7 @@ CC = gcc
 CFLAGS = -Wall
 DEPS = sort_common.h sort_algo.h
 CSRC = main.c \
-		$(wildcard algorithms/*.c) \
+	$(wildcard algorithms/*.c) \
        	$(wildcard common/*.c)
 OBJFILES = $(CSRC:.c=.o)
 TARGET = main
