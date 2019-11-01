@@ -12,10 +12,11 @@ CSRC = main.c \
        	$(wildcard common/*.c)
 OBJFILES = $(CSRC:.c=.o)
 TARGET = main
-
+.PHONY : clean all
 all: $(TARGET)
 
 $(TARGET): $(OBJFILES)
 	$(CC) $(CFLAGS) -o $(TARGET) $(OBJFILES) $(LDFLAGS)
+
 clean:
 	rm -f $(OBJFILES) $(TARGET) *~
