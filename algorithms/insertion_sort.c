@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include "sorto.h"
+#include "./../sort_algo.h"
 
-void insertion_sort(int arr[], int n)
+void insertionSort(int arr[], int n)
 {
 	int i, key, j;
 	for (i = 1; i < n; i++) {

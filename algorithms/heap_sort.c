@@ -1,12 +1,6 @@
 #include <stdio.h>
-#include "sorto.h"
-
-void swap(int *num_a, int *num_b)
-{
-    int temp = *num_b;
-    *num_b = *num_a;
-    *num_a = temp;
-}
+#include "./../sort_algo.h"
+#include "./../sort_common.h"
 
 void heapAdjust(int array[], int i, int nLength)
 {
@@ -16,8 +10,9 @@ void heapAdjust(int array[], int i, int nLength)
 
         nChild = 2 * i + 1;
 
-        if (nChild != nLength - 1 && array[nChild + 1] > array[nChild])
+        if (nChild != nLength - 1 && array[nChild + 1] > array[nChild]) {
             ++nChild;
+        }
 
         if (nTemp < array[nChild])
         {
@@ -32,7 +27,7 @@ void heapAdjust(int array[], int i, int nLength)
     array[i] = nTemp;
 }
 
-void heap_sort(int array[], int length)
+void heapSort(int array[], int length)
 {
 
     for (int i = length / 2 - 1; i >= 0; --i)
@@ -42,7 +37,7 @@ void heap_sort(int array[], int length)
 
     for (int i = length - 1; i > 0; --i)
     {
-        Swap(&array[0], &array[i]);
+        swap(&array[0], &array[i]);
         heapAdjust(array, 0, i);
     }
 }

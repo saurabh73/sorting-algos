@@ -1,24 +1,7 @@
 #include<stdio.h>
-#include "sorto.h"
+#include "./../sort_algo.h"
+#include "./../sort_common.h"
 
-
-int partitionQS(int[],int,int);
-void swap( int *num_a, int *num_b ){
-    int temp = *num_b;
-    *num_b = *num_a;
-    *num_a = temp;
-}
- 
-void quick_sort(int a[], int l,int u)
-{
-	int j;
-	if(l<u)
-	{
-		j=partitionQS(a,l,u);
-		quick_sort(a,l,j-1);
-		quick_sort(a,j+1,u);
-	}
-}
  
 int partitionQS(int arr[], int low, int high) 
 { 
@@ -38,3 +21,13 @@ int partitionQS(int arr[], int low, int high)
     return (i + 1); 
 } 
 
+void quickSort(int a[], int l,int u)
+{
+	int j;
+	if(l<u)
+	{
+		j=partitionQS(a,l,u);
+		quickSort(a,l,j-1);
+		quickSort(a,j+1,u);
+	}
+}

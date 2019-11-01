@@ -1,8 +1,17 @@
+# Usage:
+# make        # compile all binary
+# make clean  # remove ALL binaries and objects
+
+
+# compiler to use
 CC = gcc
 CFLAGS = -Wall
-DEPS = sorto.h
-OBJFILES = main_driver.o bubble_sort.o heap_sort.o selection_sort.o quick_sort.o insertion_sort.o merge_sort.o
-TARGET = final
+DEPS = sort_common.h sort_algo.h
+CSRC = main.c \
+		$(wildcard algorithms/*.c) \
+       	$(wildcard common/*.c)
+OBJFILES = $(CSRC:.c=.o)
+TARGET = main
 
 all: $(TARGET)
 

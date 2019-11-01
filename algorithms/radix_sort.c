@@ -1,5 +1,6 @@
 //c code for radix sort
-#include<stdio.h>   
+#include<stdio.h>
+#include "./../sort_algo.h"
 int getMax(int arr[], int n) 
 { 
 	int mx = arr[0]; 
@@ -31,29 +32,11 @@ void countSort(int arr[], int n, int exp)
 } 
 
  
-void radixsort(int arr[], int n) 
+void radixSort(int arr[], int n) 
 { 
- 
 	int m = getMax(arr, n); 
-
-	
-	for (int exp = 1; m/exp > 0; exp *= 10) 
+	for (int exp = 1; m/exp > 0; exp *= 10) {
 		countSort(arr, n, exp); 
-} 
-
-void print(int arr[], int n) 
-{ 
-	for (int i = 0; i < n; i++) 
-		printf("%d ",arr[i]);
-    printf("\n");    
-} 
-
-
-int main() 
-{ 
-	int arr[] = {170, 45, 75, 90, 802, 24, 2, 66}; 
-	int n = sizeof(arr)/sizeof(arr[0]); 
-	radixsort(arr, n); 
-	print(arr, n); 
-	return 0; 
-} 
+	}
+		
+}
