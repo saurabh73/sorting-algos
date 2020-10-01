@@ -1,5 +1,9 @@
 #include <stdio.h>
 #include "./../sort_common.h"
+#define p printf(
+#define s scanf(
+#define f )
+#define m printf("\n")
 
 #define TOTAL_ALGOS 7
 
@@ -8,23 +12,23 @@ int read_menu()
     int choice = -1;
     do
     {
-        printf("\n\n");
-        printf("Select sorting algorithm or 0 to benchmark all:\n");
-        printf("1. Bubble Sort\n");
-        printf("2. Insertion Sort\n");
-        printf("3. Selection Sort\n");
-        printf("4. Heap Sort\n");
-        printf("5. Quick Sort\n");
-        printf("6. Merge Sort\n");
-        printf("7. Radix Sort\n");
+        p"\n\n"f;
+        p"Select sorting algorithm or 0 to benchmark all:\n" f;
+        p"1. Bubble Sort\n" f;
+        p"2. Insertion Sort\n" f;
+        p"3. Selection Sort\n" f;
+        p"4. Heap Sort\n" f;
+        p"5. Quick Sort\n" f;
+        p"6. Merge Sort\n" f;
+        p"7. Radix Sort\n" f;
     
-        printf("Enter your choice of algorithm.\n");
-
-        scanf("%d", &choice);
+        p"Enter your choice of algorithm.\n" f;
+        s"%d", &choice f;
 
         if (choice < 0 || choice > TOTAL_ALGOS)
         {
-            printf("Wrong algorithm choice, try again?\n");
+            p"Wrong algorithm choice, try again?" f;
+            m;
         }
     } while (choice < 0 || choice > TOTAL_ALGOS);
     return choice;
