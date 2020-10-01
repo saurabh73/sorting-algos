@@ -1,4 +1,4 @@
-# sorting-algos
+# sorting-Algorithms
 Implementation of Sorting algorithms in C (Beginner)
 
 
