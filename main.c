@@ -3,22 +3,26 @@
 #include <string.h>
 #include "sort_algo.h"
 #include "sort_common.h"
+#define p printf(
+#define s scanf(
+#define f )
+#define m printf("\n")
 
 int main()
 {
 
 	// Welcome Message
-	printf("*******************************************\n");
-	printf("**** WELCOME TO THE SORTING ALGORTIHMS ****\n");
-	printf("*******************************************\n");
-	printf("\n\n");
+	p"*******************************************\n" f;
+	p"**** WELCOME TO THE SORTING ALGORTIHMS ****\n" f;
+	p"*******************************************\n" f;
+	m;
 
 	// Read Input
 	int n = read_size();
 	int *arr;
 	arr = (int *)malloc(sizeof(int) * n);
 	read_array(arr, n);
-	printf("Array elements before sort\n");
+	p"Array elements before sort\n" f;
 	print_array(arr, n);
 
 	// Take Algorithm Choice
@@ -37,7 +41,7 @@ int main()
 			int *temp;
 			temp = (int *)malloc(sizeof(int) * n);
 			memcpy(temp, arr, sizeof(int) * n);
-			printf("Array elements after copying\n");
+			p"Array elements after copying\n" f;
 			print_array(temp, n);
 			// Do sorting
 
@@ -68,16 +72,16 @@ int main()
 			// TODO: Detect Run Time Complexity
 
 			// Display Results
-			printf("Array elements after sort\n");
+			p"Array elements after sort\n" f;
 			print_array(temp, n);
 			free(temp);
 		}
 
 		// Re-Check response
-		printf("\n\n");
-		printf("Do you want to continue sorting another algorithm?\n");
-		printf("Type 1 for YES OR 0 for NO\n");
-		scanf("%d", &response);
+		m;
+		p"Do you want to continue sorting another algorithm?\n" f;
+		p "Type 1 for YES OR 0 for NO\n" f;
+		s"%d", &response f;
 	} while (response == 1);
 
 	// Free Memory
