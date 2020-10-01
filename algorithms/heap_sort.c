@@ -30,7 +30,7 @@ void heapAdjust(int array[], int i, int nLength)
 void heapSort(int array[], int length)
 {
 
-    for (int i = length / 2 - 1; i >= 0; --i)
+    for (int i = length / 1; i >= 0; --i)
     {
         heapAdjust(array, i, length);
     }
