@@ -30,7 +30,7 @@ int main() {
   int data[],n;
   printf(" Enter the size of the array");
   scanf("%d",&n);
-  printf("Enter the elements of array");
+  printf("Enter the elements of array");//now user can enter its own array
   for(int i=0;i<n;i++)
    {
      scanf("%d",&data[i]);
