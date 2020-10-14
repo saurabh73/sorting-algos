@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "./../sort_common.h"
 
-#define TOTAL_ALGOS 7
+#define TOTAL_ALGOS 8
 
 int read_menu()
 {
@@ -17,7 +17,7 @@ int read_menu()
         printf("5. Quick Sort\n");
         printf("6. Merge Sort\n");
         printf("7. Radix Sort\n");
-    
+        printf("8. Shell Sort\n");
         printf("Enter your choice of algorithm.\n");
 
         scanf("%d", &choice);

@@ -64,6 +64,9 @@ int main()
 			case 7:
 				radixSort(temp, n);
 				break;
+			case 8:
+				shellSort(temp, n);
+				break;
 			}
 			// TODO: Detect Run Time Complexity
 

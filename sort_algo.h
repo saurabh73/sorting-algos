@@ -5,3 +5,4 @@ void heapSort(int [], int);
 void quickSort(int [],int ,int);
 void mergeSort(int [], int);
 void radixSort(int [], int);
+void shellSort(int [], int);
