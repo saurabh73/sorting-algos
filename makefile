@@ -11,7 +11,7 @@ CSRC = main.c \
 	$(wildcard algorithms/*.c) \
        	$(wildcard common/*.c)
 OBJFILES = $(CSRC:.c=.o)
-TARGET = main
+TARGET = ./dist/main
 .PHONY : clean all
 all: $(TARGET)
 
