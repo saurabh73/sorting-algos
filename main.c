@@ -80,7 +80,9 @@ int main()
 		printf("\n\n");
 		printf("Do you want to continue sorting another algorithm?\n");
 		printf("Type 1 for YES OR 0 for NO\n");
-		scanf("%d", &response);
+		if (scanf("%d", &response) <= 0) {
+			response = 0;
+		}
 	} while (response == 1);
 
 	// Free Memory

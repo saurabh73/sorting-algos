@@ -11,5 +11,6 @@ file(GLOB source_files
     "common/*.c"
     "algorithms/*.c"
 )
+add_executable("${PROJ_NAME}" ${source_files})
 
-add_executable(${PROJ_NAME} ${source_files})
+install(TARGETS "${PROJ_NAME}")

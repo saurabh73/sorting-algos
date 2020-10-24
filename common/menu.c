@@ -20,12 +20,18 @@ int read_menu()
         printf("8. Shell Sort\n");
         printf("Enter your choice of algorithm.\n");
 
-        scanf("%d", &choice);
-
-        if (choice < 0 || choice > TOTAL_ALGOS)
+        if (scanf("%d", &choice) > 0)
         {
-            printf("Wrong algorithm choice, try again?\n");
+            if (choice < 0 || choice > TOTAL_ALGOS)
+            {
+                printf("Wrong algorithm choice, try again?\n");
+            }
         }
+        else
+        {
+            printf("You did not enter any number, try again?\n");
+        }
+
     } while (choice < 0 || choice > TOTAL_ALGOS);
     return choice;
 }
