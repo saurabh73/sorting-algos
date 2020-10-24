@@ -249,17 +249,17 @@ jobs:
         config:
           - {
               name: "Windows Latest MSVC",
-              artifact: "sorting_algorithms-windows-mingw.zip",
+              artifact: "sorting_algorithms-windows-mingw",
               os: ubuntu-latest,
             }
           - {
               name: "Ubuntu Latest GCC",
-              artifact: "sorting_algorithms-linux.zip",
+              artifact: "sorting_algorithms-linux",
               os: ubuntu-latest,
             }
           - {
               name: "macOS Latest Clang",
-              artifact: "sorting_algorithms-macos-clang.zip",
+              artifact: "sorting_algorithms-macos-clang",
               os: ubuntu-latest,
             }
     needs: release
