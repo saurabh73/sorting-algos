@@ -17,8 +17,9 @@ make
 
 ## Run
 ```sh
-./main
+./sorting_algorithms
 ```
+![output](https://res.cloudinary.com/dren4jgbp/image/upload/v1603520201/carbon_obaguf.png)
 
 ## Clean
 ```
