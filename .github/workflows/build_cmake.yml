@@ -25,7 +25,7 @@ jobs:
         config:
           - {
               name: "Windows Latest MSVC",
-              artifact: "windows.7z",
+              artifact: "windows",
               os: windows-latest,
               cc: "cl",
               cxx: "cl",
@@ -202,6 +202,9 @@ jobs:
 
       - name: Install Strip
         run: cmake --install build --prefix instdir --strip
+
+      - name: SHOW
+        run: tree
 
       - name: Pack
         working-directory: instdir
