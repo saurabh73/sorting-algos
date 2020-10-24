@@ -8,10 +8,10 @@ int minimum(int x, int y) { return (x < y) ? x : y; }
 void merge(int arr[], int l, int m, int r)
 {
 	int i, j, k;
-	const int n1 = m - l + 1;
-	const int n2 = r - m;
+	int n1 = m - l + 1;
+	int n2 = r - m;
 
-	int L[n1], R[n2];
+	int L[SIZE_MAX], R[SIZE_MAX];
 
 	for (i = 0; i < n1; i++)
 	{
