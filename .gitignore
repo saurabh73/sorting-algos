@@ -572,6 +572,7 @@ compile_commands.json
 CTestTestfile.cmake
 _deps
 build/*
+./sorting_algorithms
 
 ### CMake Patch ###
 # External projects
