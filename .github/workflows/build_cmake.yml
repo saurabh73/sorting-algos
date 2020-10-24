@@ -277,6 +277,11 @@ jobs:
           name: ${{ matrix.config.artifact }}
           path: ./
 
+      - name: Install tree
+        run: |
+          sudo apt-get install tree
+          tree
+
       - name: Download URL
         uses: actions/download-artifact@v1
         with:
