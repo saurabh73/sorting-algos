@@ -9,11 +9,16 @@ int read_size()
     do
     {
         printf("Enter size of array:\n");
-        scanf("%d", &n);
-
-        if (n <= 0 || n >= INT_MAX)
+        if (scanf("%d", &n) > 0)
         {
-            printf("Invalid array size, try again?\n");
+            if (n <= 0 || n >= INT_MAX)
+            {
+                printf("Invalid array size, try again?\n");
+            }
+        }
+        else
+        {
+            printf("You did not enter any number.\n");
         }
     } while (n <= 0 || n >= INT_MAX);
     return n;
@@ -24,16 +29,9 @@ void read_array(int arr[], int n)
     printf("Enter array to sort:\n");
     for (int i = 0; i < n; i++)
     {
-        scanf("%d", &arr[i]);
+        if (scanf("%d", &arr[i]) <= 0)
+        {
+            printf("You did not enter any number.\n");
+        }
     }
 }
-
-// int main() {
-//     int n = read_size();
-//     int *arr;
-//     arr = (int *)malloc(sizeof(int)*n);
-//     read_array(arr, n);
-//     print_array(arr, n);
-//     free(arr);
-//     return 0;
-// }

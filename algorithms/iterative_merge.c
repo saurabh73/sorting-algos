@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "./../sort_algo.h"
 
-int min(int x, int y) { return (x < y) ? x : y; }
+int minimum(int x, int y) { return (x < y) ? x : y; }
 
 void merge(int arr[], int l, int m, int r)
 {
@@ -67,9 +67,9 @@ void mergeSort(int arr[], int n)
 
 		for (left_start = 0; left_start < n - 1; left_start += 2 * curr_size)
 		{
-			int mid = min(left_start + curr_size - 1, n - 1);
+			int mid = minimum(left_start + curr_size - 1, n - 1);
 
-			int right_end = min(left_start + 2 * curr_size - 1, n - 1);
+			int right_end = minimum(left_start + 2 * curr_size - 1, n - 1);
 
 			merge(arr, left_start, mid, right_end);
 		}

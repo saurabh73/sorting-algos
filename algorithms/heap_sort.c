@@ -10,7 +10,8 @@ void heapAdjust(int array[], int i, int nLength)
 
         nChild = 2 * i + 1;
 
-        if (nChild != nLength - 1 && array[nChild + 1] > array[nChild]) {
+        if (nChild != nLength - 1 && array[nChild + 1] > array[nChild])
+        {
             ++nChild;
         }
 
