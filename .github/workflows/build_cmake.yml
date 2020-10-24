@@ -36,7 +36,7 @@ jobs:
           - {
               name: "Ubuntu Latest GCC",
               output: "sorting_algorithms",
-              artifact: "sorting_algorithms-linux-gcc.exe",
+              artifact: "sorting_algorithms-linux-gcc",
               os: ubuntu-latest,
               cc: "gcc",
               cxx: "g++",
@@ -44,7 +44,7 @@ jobs:
           - {
               name: "macOS Latest Clang",
               output: "sorting_algorithms",
-              artifact: "sorting_algorithms-macos-clang.exe",
+              artifact: "sorting_algorithms-macos-clang",
               os: macos-latest,
               cc: "clang",
               cxx: "clang++",
