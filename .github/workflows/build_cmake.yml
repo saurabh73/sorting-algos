@@ -27,7 +27,7 @@ jobs:
           - {
               name: "Windows Latest MSVC",
               output: "sorting_algorithms.exe",
-              artifact: "sorting_algorithms-windows-msvc.exe",
+              artifact: "sorting_algorithms-windows-msvc",
               os: windows-latest,
               cc: "cl",
               cxx: "cl",
@@ -36,7 +36,7 @@ jobs:
           - {
               name: "Windows Latest MinGW",
               output: "sorting_algorithms.exe",
-              artifact: "sorting_algorithms-windows-mingw.exe",
+              artifact: "sorting_algorithms-windows-mingw",
               os: windows-latest,
               cc: "gcc",
               cxx: "g++",
