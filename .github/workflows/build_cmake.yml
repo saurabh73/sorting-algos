@@ -25,15 +25,6 @@ jobs:
       matrix:
         config:
           - {
-              name: "Windows Latest MSVC",
-              output: "sorting_algorithms.exe",
-              artifact: "sorting_algorithms-windows-msvc",
-              os: windows-latest,
-              cc: "cl",
-              cxx: "cl",
-              environment_script: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Auxiliary/Build/vcvars64.bat",
-            }
-          - {
               name: "Windows Latest MinGW",
               output: "sorting_algorithms.exe",
               artifact: "sorting_algorithms-windows-mingw",
@@ -257,17 +248,17 @@ jobs:
         config:
           - {
               name: "Windows Latest MSVC",
-              artifact: "windows.7z",
+              artifact: "sorting_algorithms-windows-mingw.zip",
               os: ubuntu-latest,
             }
           - {
               name: "Ubuntu Latest GCC",
-              artifact: "linux.7z",
+              artifact: "sorting_algorithms-linux.zip",
               os: ubuntu-latest,
             }
           - {
               name: "macOS Latest Clang",
-              artifact: "macOS.7z",
+              artifact: "sorting_algorithms-macos-clang.zip",
               os: ubuntu-latest,
             }
     needs: release
@@ -298,4 +289,4 @@ jobs:
           upload_url: ${{ steps.set_upload_url.outputs.upload_url }}
           asset_path: ./${{ matrix.config.artifact }}
           asset_name: ${{ matrix.config.artifact }}
-          asset_content_type: application/x-gtar
+          asset_content_type: application/zip
