@@ -26,8 +26,8 @@ jobs:
         config:
           - {
               name: "Windows Latest MSVC",
-              output: "$ENV{PROJ_NAME}.exe",
-              artifact: "$ENV{PROJ_NAME}-windows-msvc.exe",
+              output: "sorting_algorithms.exe",
+              artifact: "sorting_algorithms-windows-msvc.exe",
               os: windows-latest,
               cc: "cl",
               cxx: "cl",
@@ -35,16 +35,16 @@ jobs:
             }
           - {
               name: "Ubuntu Latest GCC",
-              output: "$ENV{PROJ_NAME}",
-              artifact: "$ENV{PROJ_NAME}-linux-gcc.exe",
+              output: "sorting_algorithms",
+              artifact: "sorting_algorithms-linux-gcc.exe",
               os: ubuntu-latest,
               cc: "gcc",
               cxx: "g++",
             }
           - {
               name: "macOS Latest Clang",
-              output: "$ENV{PROJ_NAME}",
-              artifact: "$ENV{PROJ_NAME}-macos-clang.exe",
+              output: "sorting_algorithms",
+              artifact: "sorting_algorithms-macos-clang.exe",
               os: macos-latest,
               cc: "clang",
               cxx: "clang++",
