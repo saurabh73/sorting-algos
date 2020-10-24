@@ -10,6 +10,7 @@ on:
       - "master"
 
 env:
+  PROJ_NAME: sorting_algorithms
   CMAKE_VERSION: 3.18.3
   NINJA_VERSION: 1.10.1
   BUILD_TYPE: Release
@@ -25,7 +26,8 @@ jobs:
         config:
           - {
               name: "Windows Latest MSVC",
-              artifact: "windows",
+              output: "${{PROJ_NAME}}.exe",
+              artifact: "${{PROJ_NAME}}-windows-msvc.exe",
               os: windows-latest,
               cc: "cl",
               cxx: "cl",
@@ -33,14 +35,16 @@ jobs:
             }
           - {
               name: "Ubuntu Latest GCC",
-              artifact: "linux.7z",
+              output: "${{PROJ_NAME}}",
+              artifact: "${{PROJ_NAME}}-linux-gcc.exe",
               os: ubuntu-latest,
               cc: "gcc",
               cxx: "g++",
             }
           - {
               name: "macOS Latest Clang",
-              artifact: "macOS.7z",
+              output: "${{PROJ_NAME}}",
+              artifact: "${{PROJ_NAME}}-macos-clang.exe",
               os: macos-latest,
               cc: "clang",
               cxx: "clang++",
@@ -203,20 +207,10 @@ jobs:
       - name: Install Strip
         run: cmake --install build --prefix instdir --strip
 
-      - name: Install tree
-        run: sudo apt-get install tree
-
-      - name: SHOW
-        run: tree
-
-      - name: Pack
-        working-directory: instdir
-        run: cmake -E tar cfv ../${{ matrix.config.artifact }} --format=7zip .
-
       - name: Upload
         uses: actions/upload-artifact@v1
         with:
-          path: ./${{ matrix.config.artifact }}
+          path: "./instdir/bin/${{ matrix.config.output }}"
           name: ${{ matrix.config.artifact }}
 
   release:
