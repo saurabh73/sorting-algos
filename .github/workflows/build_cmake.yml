@@ -34,6 +34,14 @@ jobs:
               environment_script: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Auxiliary/Build/vcvars64.bat",
             }
           - {
+              name: "Windows Latest MinGW",
+              output: "sorting_algorithms.exe",
+              artifact: "sorting_algorithms-windows-mingw.exe",
+              os: windows-latest,
+              cc: "gcc",
+              cxx: "g++",
+            }
+          - {
               name: "Ubuntu Latest GCC",
               output: "sorting_algorithms",
               artifact: "sorting_algorithms-linux-gcc",
