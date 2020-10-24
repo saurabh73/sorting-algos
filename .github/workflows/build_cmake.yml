@@ -254,7 +254,7 @@ jobs:
             }
           - {
               name: "Ubuntu Latest GCC",
-              artifact: "Linux.7z",
+              artifact: "linux.7z",
               os: ubuntu-latest,
             }
           - {
