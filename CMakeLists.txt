@@ -13,4 +13,4 @@ file(GLOB source_files
 )
 add_executable("${PROJ_NAME}" ${source_files})
 
-install(TARGETS main)
+install(TARGETS "${PROJ_NAME}")
